@@ -47,23 +47,7 @@ Have fun creating your portfolio on this template!!! -->
       content="https://devfolio.js.org/assets/devfolio.png"
     />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <!-- Again fill content attr with the URL of this portfolio you'll host -->
-    <meta property="twitter:url" content="https://devfolio.js.org" />
-    <!-- Recommended to use the same text used within <title> element -->
-    <meta property="twitter:title" content="[Your name here] | Developer" />
-    <!-- short description that shows up while your portfolio is shared -->
-    <meta
-      property="twitter:description"
-      content="Made using DevFolio Template"
-    />
-    <!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
-    <meta
-      property="twitter:image"
-      content="https://anilseervi.vercel.app/assets/devfolio.png"
-    />
-
+    
     <!-- link tags -->
     <link rel="preload" as="style" href="./css/main.css" />
     <link rel="stylesheet" href="./css/main.css" />
@@ -91,7 +75,8 @@ Have fun creating your portfolio on this template!!! -->
 
       gtag("config", "UA-122228201-4");
     </script>
-    <!-- End of Google Analytics -->
+    <script src="./javascript/sendEmail.js"> </script>
+
   </head>
   <body>
     <!-- Hero Section -->
@@ -106,7 +91,7 @@ Have fun creating your portfolio on this template!!! -->
           <a class="cta-btn cta-btn--hero" href="#about">Let's Connect</a>
         </p>
       </section>
-      <a href="#about" class="scroll-down-link" aria-label="scroll-down">
+      <a href="#contact" class="scroll-down-link" aria-label="scroll-down">
         <div class="scroll-down"></div
       ></a>
     </div>
@@ -210,8 +195,18 @@ Have fun creating your portfolio on this template!!! -->
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <div class="contact-wrapper">
-          <p class="contact-wrapper__text">[Put your call to action here]</p>
-          <a href="#" class="cta-btn cta-btn--resume">Call to Action</a>
+          <form id="contactForm" action="send_email.php" method="POST">
+            <label for="name" class="contact-wrapper__text">Name: </label>
+            <input type="text" id="name" name="name" class="contact-wrapper__text"  placeholder="Enter your name" ><br><br>
+            
+            <label for="subject" class="contact-wrapper__text">Subject: </label>
+            <input type="text" id="subject" name="subject" class="contact-wrapper__text" placeholder="Enter subject" required><br><br>
+            
+            <label for="message" class="contact-wrapper__text">Message: </label> <br>
+            <textarea id="message" name="message" rows="6" cols="50"  placeholder="Enter your message" required></textarea><br><br>
+            
+          </form>
+          <a href="#contact" class="cta-btn cta-btn--resume" onclick="sendEmail()">Send Email</a>
         </div>
       </div>
     </section>
@@ -224,30 +219,6 @@ Have fun creating your portfolio on this template!!! -->
           <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
         </a>
         <div class="social-links">
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="twitter"
-          >
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="instagram"
-          >
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="codepen"
-          >
-            <i class="fa-brands fa-codepen"></i>
-          </a>
           <a
             href="#!"
             target="_blank"
@@ -266,15 +237,6 @@ Have fun creating your portfolio on this template!!! -->
           </a>
         </div>
         <hr />
-        <p class="footer__text">
-          &copy; <span id="year"></span> - Template by
-          <a
-            href="https://github.com/AnilSeervi"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Anil Seervi</a
-          >. <br />Made with &hearts;
-        </p>
       </div>
     </footer>
     <!-- END Footer Section -->
