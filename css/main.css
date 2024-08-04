@@ -344,7 +344,7 @@ section .row span {
   }
 }
 #about .about-wrapper {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 @media (max-width: 37.5em) {
   #about .about-wrapper {
@@ -378,6 +378,7 @@ section .row span {
   justify-content: center;
   flex-direction: column;
   text-align: left;
+  align-items: center;
 }
 @media (max-width: 48em) {
   #about .about-wrapper__info {
