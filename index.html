@@ -47,7 +47,6 @@ Have fun creating your portfolio on this template!!! -->
       content="https://devfolio.js.org/assets/devfolio.png"
     />
 
-    
     <!-- link tags -->
     <link rel="preload" as="style" href="./css/main.css" />
     <link rel="stylesheet" href="./css/main.css" />
@@ -75,8 +74,7 @@ Have fun creating your portfolio on this template!!! -->
 
       gtag("config", "UA-122228201-4");
     </script>
-    <script src="./javascript/sendEmail.js"> </script>
-
+    <script src="./javascript/sendEmail.js"></script>
   </head>
   <body>
     <!-- Hero Section -->
@@ -158,7 +156,7 @@ Have fun creating your portfolio on this template!!! -->
                 visualizations of player performance metrics. I also planned the
                 deployment of the application on Microsoft Azure for scalable
                 and reliable cloud-based operation, preparing the project for
-                future real-world applications in educational contexts
+                future real-world applications in educational contexts.
               </p>
               <div class="project-wrapper__text-btns">
                 <a
@@ -201,16 +199,42 @@ Have fun creating your portfolio on this template!!! -->
         <div class="contact-wrapper">
           <form id="contactForm" action="send_email.php" method="POST">
             <label for="name" class="contact-wrapper__text">Name: </label>
-            <input type="text" id="name" name="name" class="contact-wrapper__text"  placeholder="Enter your name" ><br><br>
-            
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="contact-wrapper__text"
+              placeholder="Enter your name"
+            /><br /><br />
+
             <label for="subject" class="contact-wrapper__text">Subject: </label>
-            <input type="text" id="subject" name="subject" class="contact-wrapper__text" placeholder="Enter subject" required><br><br>
-            
-            <label for="message" class="contact-wrapper__text">Message: </label> <br>
-            <textarea id="message" name="message" rows="6" cols="50"  placeholder="Enter your message" required></textarea><br><br>
-            
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              class="contact-wrapper__text"
+              placeholder="Enter subject"
+              required
+            /><br /><br />
+
+            <label for="message" class="contact-wrapper__text">Message: </label>
+            <br />
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              cols="50"
+              placeholder="Enter your message"
+              required
+            ></textarea
+            ><br /><br />
           </form>
-          <a href="#contact" class="cta-btn cta-btn--resume" onclick="sendEmail()">Send Email</a>
+          <a
+            href="#contact"
+            class="cta-btn cta-btn--resume"
+            onclick="sendEmail()"
+            >Send Email</a
+          >
         </div>
       </div>
     </section>
